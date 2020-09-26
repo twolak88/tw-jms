@@ -34,7 +34,7 @@ public class HelloSender {
 	private final JmsTemplate jmsTemplate;
 	private final ObjectMapper objectMapper;
 	
-//	@Scheduled(fixedRate = 2000)
+	@Scheduled(fixedRate = 2000)
 	public void sendMessage() {
 //		log.info("Sending message...");
 		HelloWorldMessage helloWorldMessage = HelloWorldMessage
