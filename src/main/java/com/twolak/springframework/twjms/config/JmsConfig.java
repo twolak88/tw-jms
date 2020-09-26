@@ -16,7 +16,8 @@ import org.springframework.jms.support.converter.MessageType;
 @Configuration
 public class JmsConfig {
 	
-	public static final String QUEUE = "hello-world";
+	public static final String QUEUE_SEND = "hello-world";
+	public static final String QUEUE_SEND_AND_RECV = "hello-world-with-repl";
 	
 	@Bean
 	public MessageConverter messageConverter() {
