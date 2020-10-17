@@ -35,7 +35,7 @@ public class HelloMessageListener {
 	
 	@JmsListener(destination = JmsConfig.QUEUE_SEND)
 	public void listen(/*required*/@Payload HelloWorldMessage helloWorldMessage, 
-			@ Headers MessageHeaders messageHeaders, Message message) {
+			@Headers MessageHeaders messageHeaders, Message message) {
 //		log.info("Receiving message");
 //		
 //		
@@ -46,7 +46,7 @@ public class HelloMessageListener {
 	
 	@JmsListener(destination = JmsConfig.QUEUE_SEND_AND_RECV)
 	public void listenRecv(/*required*/@Payload HelloWorldMessage helloWorldMessage, 
-			@ Headers MessageHeaders messageHeaders, Message jmsMessage, 
+			@Headers MessageHeaders messageHeaders, Message jmsMessage, 
 			org.springframework.messaging.Message<HelloWorldMessage> springMessage) throws JmsException, JMSException {
 		
 		HelloWorldMessage responseMessage = HelloWorldMessage
